@@ -2,7 +2,7 @@ var navLinks = document.querySelectorAll(".nav-links");
 
 var windowPathname = window.location.pathname;
 
-navLinks.forEach(function(navLink) {
+navLinks.forEach((navLink) => {
     if (navLink.href.includes(windowPathname)) {
         navLink.classList.add("active");
     }
