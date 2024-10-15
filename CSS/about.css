@@ -27,20 +27,19 @@
 }
 
 .first {
-    font-size: clamp(0.9rem, 1.500vw, 3rem);
+    font-size: clamp(1rem, 1.500vw, 3rem);
 }
 
 .second {
     color: var(--secondary-colour);
-    font-size: 1rem;
+    font-size: clamp(0.9rem, 1vw, 2rem);
 }
 
 .about-image {
-    width: 320px;
+    width: clamp(200px, 25vw, 500px);
     height: auto;
+    margin-bottom: 10px;
     clip-path: circle();
-    padding: 0;
-    margin: 0;
     object-fit: cover;
 }
 
@@ -141,7 +140,7 @@
 
 @media (max-width: 769px) {
     .about-hero {
-        flex-direction: column;
+        flex-direction: column-reverse;
         justify-content: center;
         align-items: center;
         text-align: center;
@@ -150,7 +149,7 @@
 }
 
 @media (min-width: 770px) and (max-width: 1024px) {
-    .about-image {
+    /* .about-image {
         width: 290px
-    }
+    } */
 }

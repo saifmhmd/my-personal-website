@@ -27,8 +27,8 @@ body {
 }
 
 .hero {
-    display: grid;
-    grid-template-columns: auto auto;
+    display: flex;
+    padding: 0;
 }
 
 .logo {
@@ -105,21 +105,22 @@ body {
 }
 
 .left-container, .works {
+    flex: 1;
     padding: 70px 0px;
 }
 
 .right-container {
-    margin-left: 10%;
+    /* margin-left: 10%; */
 }
 
 .my-image {
-    width: 365px;
+    width: clamp(200px, 23vw, 550px);
     height: auto;
-    margin-top: 40px;
+    margin-top: 18%;
     filter: contrast(110%);
     object-fit: cover;
-    background: grey;
-    border-radius: 38% 62% 65% 35% / 39% 33% 67% 61%;
+    clip-path: circle();
+    /* border-radius: 38% 62% 65% 35% / 39% 33% 67% 61%; */
 }
 
 .mobile-image {
@@ -128,14 +129,14 @@ body {
 
 .title {
     color: var(--secondary-color);
-    font-size: 3rem;
+    font-size: clamp(2rem, 3.500vw, 5rem);
     margin: 0;
     padding: 20px 0 10px;
 }
 
 .paragraph {
     color: grey;
-    font-size: 1.2rem;
+    font-size: clamp(1rem, 1.3vw, 1.8rem);
     font-weight: 200;
     margin-bottom: 30px;
     margin-top: 10px;
@@ -282,17 +283,13 @@ footer {
     .mail-btn {
         display: none;
     }
+    .hero {
+        flex-direction: column-reverse;
+        align-items: center;
+        text-align: center;
+    }
     .left-container {
-        padding: 50px 0;
-    }
-    .my-image {
-        width: 290px;
-    }
-    .title {
-        font-size: 2rem;
-    }
-    .paragraph {
-        font-size: 1rem;
+        padding: 0;
     }
     .mail-btn {
         padding: 8px 10px;
@@ -370,14 +367,7 @@ footer {
     .nav-links {
         font-size: 0.9rem;
     }
-    .title{
-        font-size: 2.5rem;
-    }
-    .paragraph {
-        font-size: 1rem;
-    }
     .my-image {
-        width: 345px;
         margin-top: 50px;
     }
     .hire-btn, .work-btn {
